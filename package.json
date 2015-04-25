@@ -1,0 +1,11 @@
+{
+  "name": "hubot-twitter-dm",
+  "version": "0.0.2",
+  "description": "twitter direct message adapter",
+  "main": "src/hubot-twitter-dm.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "justangon",
+  "license": "MIT"
+}
