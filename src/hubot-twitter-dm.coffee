@@ -38,10 +38,10 @@ class TwitterDm extends Adapter
   run: ->
     self = @
     options =
-      key         : process.env.HUBOT_TWITTER_KEY || 'uGIGeozmGTKprY9pgTvV44PTF'
-      secret      : process.env.HUBOT_TWITTER_SECRET || '4zWwLzLQHP0Y1g1OiCAXDmLqtwUn33bHsigxFhNiX5fVspcKB8'
-      token       : process.env.HUBOT_TWITTER_TOKEN || '104734817-gsFrKLdK5LGbNroRgtSC4DGsL6fVlr84DpMtubKN'
-      tokensecret : process.env.HUBOT_TWITTER_TOKEN_SECRET || 'FedZRGCPwv8MAxw4yvWANlhJsGdg7gtszxfD0IjcshLdO'
+      key         : process.env.HUBOT_TWITTER_KEY
+      secret      : process.env.HUBOT_TWITTER_SECRET
+      token       : process.env.HUBOT_TWITTER_TOKEN
+      tokensecret : process.env.HUBOT_TWITTER_TOKEN_SECRET
 
     bot = new TwitterDmStreaming(options)
     @emit "connected"
@@ -109,7 +109,7 @@ class TwitterDmStreaming extends EventEmitter
 
     request.on "response", (response) ->
       response.on "data", (chunk) ->
-        console.log 'Rdata'
+        #console.log 'Rdata'
         parseResponse chunk+'',callback
 
       response.on "end", (data) ->
